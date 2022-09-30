@@ -32,7 +32,7 @@ public class Team {
   ```
 ## Sponsor Class
   ```
-  @Entity
+@Entity
 public class Sponsor {
 	
 	@Id
@@ -102,38 +102,38 @@ public class Sponsor {
   ```
   ## App Class and Outputs
   ```	
-		// Entity manager
-		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("JpaManyToManyUnit");
-		EntityManager entityManager = entityManagerFactory.createEntityManager();
+	// Entity manager
+	EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("JpaManyToManyUnit");
+	EntityManager entityManager = entityManagerFactory.createEntityManager();
 		
-		TeamRepository teamRepository = new TeamRepositoryImpl(entityManager);
-		SponsorRepository sponsorRepository = new SponsorRepositoryImpl(entityManager);
-		sponsorRepository.prepareData();
+	TeamRepository teamRepository = new TeamRepositoryImpl(entityManager);
+	SponsorRepository sponsorRepository = new SponsorRepositoryImpl(entityManager);
+	sponsorRepository.prepareData();
 		
-		System.out.println("All Teams");
-		teamRepository.getAllTeams().stream().forEach(System.out::println);
+	System.out.println("All Teams");
+	teamRepository.getAllTeams().stream().forEach(System.out::println);
 		
-		System.out.println("\nAll Sponsor");
-		sponsorRepository.getAllSponsors().stream().forEach(System.out::println);
+	System.out.println("\nAll Sponsor");
+	sponsorRepository.getAllSponsors().stream().forEach(System.out::println);
 		
-		System.out.println("\nThe team with the specified (ID = 3) is deleting..");
-		teamRepository.deleteTeam(3);
+	System.out.println("\nThe team with the specified (ID = 3) is deleting..");
+	teamRepository.deleteTeam(3);
 		
-		System.out.println("\nAll Teams After Deleting Operation");
-		teamRepository.getAllTeams().stream().forEach(System.out::println);
+	System.out.println("\nAll Teams After Deleting Operation");
+	teamRepository.getAllTeams().stream().forEach(System.out::println);
 		
-		System.out.println("\nThe sponsor with the specified (ID = 3) is deleting..");
-		sponsorRepository.deleteSponsor(3);
+	System.out.println("\nThe sponsor with the specified (ID = 3) is deleting..");
+	sponsorRepository.deleteSponsor(3);
 		
-		System.out.println("The sponsor's name (the specified ID = 2) is updating to 'Test'..");
-		sponsorRepository.updateSponsorName(2, "Test");
+	System.out.println("The sponsor's name (the specified ID = 2) is updating to 'Test'..");
+	sponsorRepository.updateSponsorName(2, "Test");
 		
-		System.out.println("\nAll Sponsors After Deleting and Updating Operations");
-		sponsorRepository.getAllSponsors().stream().forEach(System.out::println);
+	System.out.println("\nAll Sponsors After Deleting and Updating Operations");
+	sponsorRepository.getAllSponsors().stream().forEach(System.out::println);
 		
-		// Close the entity manager and associated factory
-        	entityManager.close();
-        	entityManagerFactory.close();
+	// Close the entity manager and associated factory
+        entityManager.close();
+        entityManagerFactory.close();
   ```
   ```
 All Teams
