@@ -136,8 +136,8 @@ public class Sponsor {
 	sponsorRepository.getAllSponsors().stream().forEach(System.out::println);
 		
 	// Close the entity manager and associated factory
-        entityManager.close();
-        entityManagerFactory.close();
+	entityManager.close();
+	entityManagerFactory.close();
   ```
   ```
 All Teams
