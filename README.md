@@ -101,11 +101,7 @@ public class Sponsor {
 	}
   ```
   ## App Class and Outputs
-  ```
-  public class App {
-
-	public static void main(String[] args) {
-		
+  ```	
 		// Entity manager
 		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("JpaManyToManyUnit");
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -136,10 +132,8 @@ public class Sponsor {
 		sponsorRepository.getAllSponsors().stream().forEach(System.out::println);
 		
 		// Close the entity manager and associated factory
-        entityManager.close();
-        entityManagerFactory.close();
-	}
-}
+        	entityManager.close();
+        	entityManagerFactory.close();
   ```
   ```
 All Teams
