@@ -10,7 +10,7 @@ In ManyToMany relationships, the owning side is optional. The mappedBy parameter
 
 ## Team Class
 
-```
+```java
 @Entity
 public class Team {
 	
@@ -35,7 +35,7 @@ public class Team {
 	}	
   ```
 ## Sponsor Class
-  ```
+  ```java
 @Entity
 public class Sponsor {
 	
@@ -61,7 +61,7 @@ public class Sponsor {
   ```
   
   ## SponsorRepository Update and Delete Methods
-   ```
+   ```java
       /**
      * Deletes the sponsor with the specified ID. This method deletes the sponsor and all references to its Teams,
      * but does not delete the Teams themselves.
@@ -105,7 +105,7 @@ public class Sponsor {
 	}
   ```
   ## App Class and Outputs
-  ```	
+  ```java	
 	// Entity manager
 	EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("JpaManyToManyUnit");
 	EntityManager entityManager = entityManagerFactory.createEntityManager();
