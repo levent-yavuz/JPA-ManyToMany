@@ -1,3 +1,7 @@
+#### Other JPA Projects:
+- [JPA-OneToOne](https://github.com/levent-yavuz/JPA-OneToOne)
+- [JPA-OneToMany](https://github.com/levent-yavuz/JPA-OneToMany)
+
 # JPA - ManyToMany Relationship
 
 In ManyToMany relationships, the owning side is optional. The mappedBy parameter specifies the inverse side. If the mappedBy parameter is not used, then there will be 2 Unidirectional ManyToMany relationships.
